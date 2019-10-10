@@ -1,0 +1,48 @@
+
+
+Every node application needs libraries and command line utilities
+( compiler,test runner, linting tools,build tools
+
+Both libraries and utilities are downloaded with help on npm
+
+Libraries
+
+		Libraries cab be categorized into two types
+		
+		   1. Production Dependencies
+		     
+		   2. Development Dependencies
+		   
+		   Ex:
+		     Enzyme is a library used in react ,it is used for running tests but it is
+			 in production...this is not necassary to be built in distributable copy
+			 
+			   such dependencies are development dependencies
+			   
+			 For Jquery  ,always jquery will be in the production code if it is used in 
+			 developoment
+			  
+			    such dependencies are production dependencies
+				
+				
+			To download production dependencies
+			
+			       npm install --save  <library name>
+				   
+				   in latest npm versions...
+				   
+				   npm install <library name>
+				   
+			to download development dependencies
+			
+			       npm install --save-dev <library name>
+				   
+Command line utilities
+
+           to download utilities, you have to do it in global scope
+		   
+		   npm install -g <utility>
+		   
+		   
+		   
+				   

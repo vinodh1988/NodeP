@@ -1,0 +1,22 @@
+
+
+Node
+
+				1. Node JS run JS
+				2. Node JS does not support browser based libraries
+				3. Node JS has some inbuilt global variables/functions
+				4. Node JS runs js by using v8 engine
+				5. Most of node js platform is written in c++
+				6. Node JS supports libraries to deal with http, fs, os, network protocals
+				,rdbms...
+				7. Node JS provides lot of inbuilt modules(libraries)
+				8. Node js is non blocking and asynchronous in nature
+				
+NPM
+
+				1.it is a package management utility
+				2.node app is a node package
+				3. by using npm we manage dependencies, app stucture and other development 
+				related activities(testing,build,linting,...)
+				
+				
