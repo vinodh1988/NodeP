@@ -1,0 +1,79 @@
+
+
+Javascript -- 1.is not a language with good modularity and structure(es5)
+              It is hard to maintain gaint js files
+			  Understanding the flow is difficult if it is huge.
+			  no type checking , additional care has to be taken by programmer
+			  Asychrounous in nature
+			  
+			  
+			  There is a need for a language which has better modularity, better way
+			  to handle asychronous, typechecking....
+			  
+			  
+			  Unfortunatly browser support only javascript
+			  
+			  Solution:
+			  
+			    If there is language with proper typechecking, modularity, maintainability
+				and if it is convertable to js...
+				
+				Developers can develop in that language and later convert it to js
+			  
+			 EX:  es2015, jsx, coffeescript, typescript (development)
+			      production --- es5
+				
+	Amount of code transferred
+	
+	        In older technique, we include the complete library file(one way followed
+			to minimize amount of transfer is minifying)
+			
+			
+			Solution
+			  
+			  if there is a tool , if opening(beginning) file is given as input
+			  if it is capable of walking through the code and files and if it could
+			  combine all the lines of code into one file and skip the lines which are
+			  never called, it could lot of lines of code that is never used
+			  
+			  this technique is called bundling(before bundle we usually complile or 
+			  transpile source code)
+			  
+			  While bundling we also minify the code..
+			  
+	Other development activities
+	
+	                unit testing
+					linting
+					
+					During development we dont deploy bundled code in web server
+					..
+					
+					We actually create a node based server to handle browser requests
+					and we host our app during development in this node based server
+				    (Development server)
+					
+					
+	-----------------------------------------------------------------------------------------				
+		For all these development activities we need some tools which are capable of
+transpiling, compiling, test running ,linting, minifying, creatingdev server 
+  
+          all these tools are availabe as command line utilities in node ecosystem
+and they run on node platform
+
+     And Hence we use node js as a development platform for SPA Development
+	 
+	 Once the SPA is bundled and we get distrubutable version, we dont need node anymore
+	 
+	 -------------------------------------------------------------------------------------
+	
+Production 
+	
+	 We usually either merge the bundled code with full application or we directly host it
+	 in a web server
+	 
+	 
+			  
+			  
+	
+		
