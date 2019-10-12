@@ -1,0 +1,22 @@
+html
+    link(rel="stylesheet",href="../css/bootstrap.min.css")
+    script(src="../jquery.min.js")
+    script(src="../js/bootstrap.min.js")
+    head
+        title pug document
+    body
+        h1 pug is working
+        div.jumbotron
+            table.table.table-striped
+                thead
+                    th Sno
+                    th Name
+                    th City
+                tbody
+                    each x in people
+                        tr
+                            td= x.sno
+                            td= x.name
+                            td= x.city
+
+            h3.alert.alert-dark Programmed by #{programmer}

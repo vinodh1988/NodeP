@@ -12,6 +12,10 @@ app.use(express.static(path.join(__dirname,"bower_components/bootstrap/dist")))
 
 app.use(bodyParser.urlencoded());
 
+app.set('views', path.join(__dirname, 'public/views'));//setting the path of template files
+app.set('view engine', 'pug'); //configuring view Engine
+
+
 app.get("/",function(request,response){
       response.send("This is my first node app");
 });
@@ -24,6 +28,17 @@ app.get("/driver",function(request,response){
 app.get("/home",(request,response)=>{
     response.sendFile(path.join(__dirname,"public/index.html"));
 });
+
+app.get("/showpeople",function(request,response){
+     fs.readFile("files/data.json","utf8",function(err,data){
+       if(err)
+          response.sendStatus(500);
+       else{
+          let people= JSON.parse(data);
+          response.render('people',{people:people, programmer: "Johnson"});
+       }
+     })
+})
 
 app.post("/storeperson",(request,response)=>{
   let sno=request.body.sno;
