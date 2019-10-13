@@ -1,0 +1,9 @@
+
+mysql> create user vinodh identified by 'password';
+Query OK, 0 rows affected (0.18 sec)
+
+mysql> grant all privileges on *.* to 'vinodh'@'%';
+Query OK, 0 rows affected (0.41 sec)
+
+mysql> alter user 'vinodh'@'%' identified with mysql_native_password by 'password';
+Query OK, 0 rows affected (0.10 sec)

@@ -2,6 +2,7 @@ var fs=require("fs");
 var express=require('express');
 var bodyParser=require('body-parser');
 var path=require("path");
+var dbroute=require("./server/routes/dbroutes")
 var app=express();
 
 //To configure path of static resources
@@ -16,6 +17,7 @@ app.set('views', path.join(__dirname, 'public/views'));//setting the path of tem
 app.set('view engine', 'pug'); //configuring view Engine
 
 
+app.use('/dbops',dbroute);
 app.get("/",function(request,response){
       response.send("This is my first node app");
 });
@@ -28,6 +30,10 @@ app.get("/driver",function(request,response){
 app.get("/home",(request,response)=>{
     response.sendFile(path.join(__dirname,"public/index.html"));
 });
+
+app.get("/images/:filename",(request,response)=>{
+    response.sendFile("E:/projectimages/"+request.params.filename);
+})
 
 app.get("/showpeople",function(request,response){
      fs.readFile("files/data.json","utf8",function(err,data){
