@@ -7,6 +7,7 @@ var app=express();
 
 //To configure path of static resources
 app.use(express.static(path.join(__dirname,"public/styles")));
+app.use(express.static(path.join(__dirname,"public/static")));
 app.use(express.static(path.join(__dirname,"public/scripts")));
 app.use(express.static(path.join(__dirname,"bower_components/jquery/dist")));
 app.use(express.static(path.join(__dirname,"bower_components/bootstrap/dist")))
