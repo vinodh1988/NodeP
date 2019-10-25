@@ -13,5 +13,21 @@ route.get("/modules",(request,response)=>{
     })
 });
 
+route.post("/modules",(request,response)=>{
+    let module={modulecode:request.body.modulecode,
+                modulename:request.body.modulename,
+                duration:request.body.duration,
+                price:request.body.price,
+                filename:request.body.filename,
+                description:request.body.description
+               }
+        operations.addModules(module,function(err,data){
+            if(err)
+              response.sendStatus(500);
+            else 
+              response.send("Successfully stored");
+        });
+});
+
 
 module.exports=route;
